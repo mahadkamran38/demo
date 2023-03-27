@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="product-summary">
+        <h2>Product Summary</h2>
+        <ul>
+          <li>Feature 1</li>
+          <li>Feature 2</li>
+          <li>Feature 3</li>
+        </ul>
+        <button id="view-details-button">View Details</button>
+      </div>
+      <a href="../document.docx">Download</a>
+
+      <div id="product-details" style="display: none;">
+        <h2>Product Details</h2>
+        <ul>
+          <li>Detailed Feature 1</li>
+          <li>Detailed Feature 2</li>
+          <li>Detailed Feature 3</li>
+        </ul>
+        <button id="hide-details-button">Hide Details</button>
+      </div>
+      <script>
+        var viewDetailsButton = document.getElementById("view-details-button");
+        var hideDetailsButton = document.getElementById("hide-details-button");
+        var productSummary = document.getElementById("product-summary");
+        var productDetails = document.getElementById("product-details");
+      
+        viewDetailsButton.addEventListener("click", function() {
+          productSummary.style.display = "none";
+          productDetails.style.display = "block";
+        });
+      
+        hideDetailsButton.addEventListener("click", function() {
+          productSummary.style.display = "block";
+          productDetails.style.display = "none";
+        });
+      </script>
+</body>
+</html>
